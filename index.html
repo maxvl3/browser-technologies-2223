@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enquête minor Web Development</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Enquête minor Web Development</h1>
+      <ol>
+        <li class="active"><b>Start</b></li>
+        <li>Vak 1</li>
+        <li>Vak 2</li>
+        <li>Vak 3</li>
+        <li>Vak 4</li>
+        <li>Vak 5</li>
+        <li>Vak 6</li>
+        <li>Vak 7</li>
+        <li>Vak 8</li>
+      </ol>
+    </header>
+    <main>
+      <form action="/html/vak1.html">
+        <h2>Studentgegevens</h2>
+        <div>
+          <label for="voornaam">Voornaam:</label>
+          <input type="text" id="voornaam" name="voornaam" required placeholder="Jouw voornaam" minlength="2"/>
+        </div>
+
+        <div>
+          <label for="achternaam">Achternaam:</label>
+          <input type="text" id="achternaam" name="achternaam" required placeholder="Jouw achternaam" minlength="2"/>
+        </div>
+
+        <div>
+          <label for="studentnummer">Studentnummer:</label>
+          <input type="text" id="studentnummer" name="studentnummer" required placeholder="Jouw studentnummer" pattern="[5-6][0-9]{8}" minlength="2" maxlength="9" />
+        </div>
+
+        <div>
+          <label for="email">E-mailadres:</label>
+          <input type="email" id="email" name="email" required placeholder="Jouw e-mailadres"/>
+        </div>
+
+        <div>
+          <button type="submit">Volgende</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

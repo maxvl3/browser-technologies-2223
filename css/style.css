@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --background-color: #0B0C10;
+    --secondair-color: #202833;
+    --text-color: #FFFFFF;
+    --accent-color: #66FCF1;
+}
+
+body{
+    background-color: var(--background-color);
+}
+
+header h1{
+    color: var(--background-color);
+    background-color: var(--accent-color);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header ol{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: var(--secondair-color);
+    border-radius: 1000px;
+    margin-bottom: 20px;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header ol li{
+    padding: 10px 15px;
+    color: white;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+header ol li:first-child{
+    border-radius: 1000px 0px 0px 1000px;
+}
+
+header ol li.active{
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
+
+form{
+    background-color: var(--secondair-color);
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+form h2, form p, form label{
+    color: var(--text-color);
+}
+
+form > div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form > div:last-child{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+form > div:last-child button[type="submit"]{
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 100px;
+    color: var(--background-color);
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form > div:last-child button[type="submit"]:hover{
+    transform: scale(0.9);
+}
+
+form > div:last-child a{
+    text-decoration: none;
+    background-color: var(--text-color);
+    border: none;
+    border-radius: 100px;
+    color: var(--background-color);
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+form > div:last-child a:hover{
+    transform: scale(0.9);
+}
+
+input:focus{
+    outline: none;
+}
+
+input[type="text"], input[type="email"]{
+    background-color: var(--background-color);
+    border: none;
+    padding: 15px 20px;
+    border-radius: 1000px;
+    font-size: 16px;
+    color: var(--text-color);
+    box-shadow: 3px 3px 0px 0px #ffffff50;
+}
+
+input[type="text"]:valid, input[type="email"]:valid{
+    box-shadow: 3px 3px 0px 0px var(--accent-color);
+}
+
+.scorebar input[type=radio] {
+    opacity: 0;
+}
+
+.scorebar{
+    background-color: var(--background-color);
+    border-radius: 1000px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+
+.scorebar label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    border-radius: 1000px;
+}
+
+.scorebar label:last-child {
+    margin-right: 12px;
+}
+
+.scorebar input[type=radio]:checked + label {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
+
+@media (prefers-color-scheme: light) {
+    body{
+        background-color: var(--text-color);
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    body{
+        background-color: var(--secondair-color);
+    }
+    header h1{
+        margin: 0px;
+    }
+    header ol{
+        margin: 0px;
+        border-radius: 0px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0px;
+        overflow-x: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    header ol::-webkit-scrollbar {
+        display: none; /* for Chrome, Safari, and Opera */
+    }
+    header ol li{
+        color: var(--background-color);
+        background-color: var(--text-color);
+    }
+    header ol li:first-child{
+        border-radius: 0px;
+    }
+    form{
+        padding: 20px;
+        padding-top: 40px;
+        margin: 0px;
+        border-radius: 0px;
+    }
+}
