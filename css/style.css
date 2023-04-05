@@ -123,8 +123,8 @@ form > div:last-child a:hover{
     transform: scale(0.9);
 }
 
-input:focus{
-    outline: none;
+form > div:last-child a:focus, form > div:last-child button[type="submit"]:focus{
+    outline-color: var(--background-color);
 }
 
 input[type="text"], input[type="email"]{
@@ -136,6 +136,11 @@ input[type="text"], input[type="email"]{
     color: var(--text-color);
     border: solid;
     border-width: 0px 3px 3px 0px;
+    border-color: #ffffff50;
+}
+
+input[type="text"]:focus, input[type="email"]:focus{
+    outline: none;
     border-color: var(--text-color);
 }
 
@@ -212,6 +217,7 @@ input[type="text"]:valid, input[type="email"]:valid{
     form{
         padding: 20px;
         padding-top: 40px;
+        padding-bottom: 60px;
         margin: 0px;
         border-radius: 0px;
     }
