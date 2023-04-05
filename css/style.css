@@ -60,7 +60,6 @@ form{
     padding: 40px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -71,10 +70,21 @@ form h2, form p, form label{
     color: var(--text-color);
 }
 
+form > div > label{
+    margin-bottom: 5px;
+}
+
+form > div > p{
+    margin-bottom: 5px;
+}
+
+form > div:first-child p{
+    margin-bottom: 0px;
+}
+
 form > div{
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
 form > div:last-child{
