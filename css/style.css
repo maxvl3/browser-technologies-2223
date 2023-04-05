@@ -134,11 +134,13 @@ input[type="text"], input[type="email"]{
     border-radius: 1000px;
     font-size: 16px;
     color: var(--text-color);
-    box-shadow: 3px 3px 0px 0px #ffffff50;
+    border: solid;
+    border-width: 0px 3px 3px 0px;
+    border-color: var(--text-color);
 }
 
 input[type="text"]:valid, input[type="email"]:valid{
-    box-shadow: 3px 3px 0px 0px var(--accent-color);
+        border-color: var(--accent-color);
 }
 
 .scorebar input[type=radio] {
